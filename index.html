@@ -2,22 +2,11 @@
 <head>
     <title>Retro look example</title>
     <meta charset="utf-8">
-
-    <style>
-    body {
-        font-size: 2em;
-    }
-    canvas {
-        width: 512px;
-        height: 512px;
-        image-rendering: -moz-crisp-edges;
-        image-rendering: -webkit-crisp-edges;
-        image-rendering: pixelated;
-    }
-    </style>
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
+<main>
     <canvas id="game" width="128" height="128"></canvas>
     <pre>
 canvas {
@@ -26,6 +15,10 @@ canvas {
     image-rendering: pixelated;
 }
     </pre>
+</main>
+<footer>
+    <p>See how to do this <a href="phaser.html">in Phaser</a>.</p>
+</footer>
 
 <script>
 // get canvas context

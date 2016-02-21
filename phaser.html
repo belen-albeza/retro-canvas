@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+    <title>Retro pixel art with Phaser</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.6/phaser.min.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <main>
+    <div id="game"></div>
+    <pre>
+<span class="comment">// scale the game 4x</span>
+game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
+game.scale.setUserScale(4, 4);
+
+<span class="comment">// enable crisp rendering</span>
+game.renderer.renderSession.roundPixels = true;
+Phaser.Canvas.setImageRenderingCrisp(this.game.canvas);
+    </pre>
+    </main>
+    <footer>
+        <p>See how to do this in <a href="index.html">any HTML 5 game</a>.</p>
+    </footer>
+<script>
+window.onload = function () {
+    var game = new Phaser.Game(128, 128, Phaser.AUTO, 'game', {
+        preload: function () {
+            game.load.image('cat');
+        },
+        init: function () {
+            // scale the game 4x
+            game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
+            game.scale.setUserScale(4, 4);
+            // enable crisp rendering
+            game.renderer.renderSession.roundPixels = true;
+            Phaser.Canvas.setImageRenderingCrisp(this.game.canvas);
+        },
+        create: function () {
+            game.add.image(0, 0, 'cat');
+        }
+    });
+};
+</script>
+</body>
